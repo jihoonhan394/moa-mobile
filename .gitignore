@@ -117,3 +117,43 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+# ───────────────────────────────────────────────────────────
+# Capacitor · Android · iOS · 시크릿 (moa-mobile 추가)
+# ───────────────────────────────────────────────────────────
+
+# Node / Capacitor
+node_modules/
+dist/
+www/build/
+.capacitor/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/app/google-services.json
+*.keystore
+*.jks
+keystore.properties
+
+# iOS
+ios/App/Pods/
+ios/App/build/
+ios/App/App/GoogleService-Info.plist
+*.mobileprovision
+*.p8
+*.p12
+*.cer
+
+# 환경·시크릿 — 고객사 키와 서버 주소는 커밋하지 않는다
+.env
+.env.*
+!.env.example
+flavor-*.properties
+
+# 도구
+.DS_Store
+.idea/
+.vscode/
+*.log
